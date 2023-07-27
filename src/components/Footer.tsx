@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Footer = () => {
   return (
     <div>
-      <Div></Div>
+      <Div>pigrok</Div>
       <Foot>by. 맹구와 짱구</Foot>
     </div>
   );
@@ -30,4 +30,8 @@ const Foot = styled.div`
 const Div = styled.div`
   background-color: #3dcc05;
   padding: 30px 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;

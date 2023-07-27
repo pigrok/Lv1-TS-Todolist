@@ -57,11 +57,11 @@ const App = () => {
     <div>
       <GlobalStyle />
       <div>
-        <Header />
+        <Header todos={todos} setTodos={setTodos} />
       </div>
-      <div>
+      {/* <div>
         <Input todos={todos} setTodos={setTodos} />
-      </div>
+      </div> */}
       <div>
         <Todolist todos={todos} setTodos={setTodos} isDone={false} />
         <Todolist todos={todos} setTodos={setTodos} isDone={true} />
