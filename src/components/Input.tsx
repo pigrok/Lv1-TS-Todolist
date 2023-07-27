@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import shortid from "shortid";
+import styled from "styled-components";
 import { Todo } from "../App";
 
 interface InputProps {
@@ -11,7 +12,7 @@ const Input: React.FC<InputProps> = ({ todos, setTodos }) => {
   const [title, setTitle] = useState<string>("");
   const [contents, setContents] = useState<string>("");
 
-  const onSubmitHandler = (e: React.FormEvent) => {
+  const onSubmitHandler = (e: React.FormEvent): void => {
     e.preventDefault();
     if (!title) {
       return alert("제목을 입력해주세요");
@@ -39,25 +40,57 @@ const Input: React.FC<InputProps> = ({ todos, setTodos }) => {
 
   return (
     <div>
-      <form onSubmit={onSubmitHandler}>
-        <input
-          type="text"
-          id="text"
-          placeholder="제목"
-          value={title}
-          onChange={onChangeTitle}
-        />
-        <input
-          type="contents"
-          id="contents"
-          placeholder="내용"
-          value={contents}
-          onChange={onChangeContents}
-        />
-        <button type="submit">제출</button>
-      </form>
+      {" "}
+      <InputContainer>
+        <form onSubmit={onSubmitHandler}>
+          <InputBox
+            type="text"
+            id="text"
+            placeholder="제목"
+            value={title}
+            onChange={onChangeTitle}
+          />
+          <InputBox
+            type="contents"
+            id="contents"
+            placeholder="내용"
+            value={contents}
+            onChange={onChangeContents}
+          />
+          <Button type="submit">제출</Button>
+        </form>
+      </InputContainer>
     </div>
   );
 };
 
 export default Input;
+
+const InputContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  margin-top: 25px;
+  background-color: #f8f856;
+`;
+
+const InputBox = styled.input`
+  border-radius: 5px;
+  border-color: white;
+
+  margin: 3px;
+
+  width: 200px;
+`;
+
+const Button = styled.button`
+  background-color: #ffffff;
+  border-color: #ffffff;
+  border-radius: 5px;
+  width: 50px;
+
+  color: gray;
+`;
