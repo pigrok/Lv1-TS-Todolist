@@ -67,9 +67,9 @@ const TodoTitle = styled.p`
   justify-content: center;
   align-items: center;
 
-  background-color: #f64030;
-  padding: 20px 20px;
-  font-size: 25px;
+  background-color: #eaf42d;
+  padding: 1.5rem 1rem;
+  font-size: 1.5rem; /* 예: 루트 폰트 크기가 16px라면, 1.5rem은 24px입니다. */
 `;
 
 const DoneTitle = styled.p`
@@ -77,13 +77,13 @@ const DoneTitle = styled.p`
   justify-content: center;
   align-items: center;
 
-  background-color: #df9711cd;
-  padding: 20px 20px;
-  font-size: 25px;
+  background-color: #f64030;
+  padding: 1.5rem 1rem;
+  font-size: 1.5rem;
 `;
 const TodoWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 25px;
 `;
 
