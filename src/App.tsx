@@ -14,6 +14,7 @@ export interface Todo {
 }
 
 const App = () => {
+
   const [todos, setTodos] = useState<Todo[]>([
     {
       id: shortid.generate(),
@@ -33,6 +34,11 @@ const App = () => {
       contents: "금요일 출석하기",
       isDone: false,
     },
+      id: shortid.generate(),
+      title: "TS 강의듣기",
+      contents: "스파르타 코딩클럽 TS 강의 듣기",
+      isDone: true,
+    },
     {
       id: shortid.generate(),
       title: "TIL 쓰기",
@@ -43,12 +49,6 @@ const App = () => {
       id: shortid.generate(),
       title: "TS 과제",
       contents: "TS LV1 Todolist 만들기",
-      isDone: true,
-    },
-    {
-      id: shortid.generate(),
-      title: "TS 강의듣기",
-      contents: "스파르타 코딩클럽 TS 강의 듣기",
       isDone: true,
     },
   ]);
@@ -70,7 +70,6 @@ const App = () => {
         <Footer />
       </div>
     </div>
-  );
-};
+  ]);
 
 export default App;
