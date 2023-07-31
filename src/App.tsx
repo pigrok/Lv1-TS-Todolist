@@ -59,9 +59,6 @@ const App = () => {
       <div>
         <Header todos={todos} setTodos={setTodos} />
       </div>
-      {/* <div>
-        <Input todos={todos} setTodos={setTodos} />
-      </div> */}
       <div>
         <Todolist todos={todos} setTodos={setTodos} isDone={false} />
         <Todolist todos={todos} setTodos={setTodos} isDone={true} />
