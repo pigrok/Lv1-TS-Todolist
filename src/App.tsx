@@ -34,6 +34,7 @@ const App = () => {
       contents: "금요일 출석하기",
       isDone: false,
     },
+    {
       id: shortid.generate(),
       title: "TS 강의듣기",
       contents: "스파르타 코딩클럽 TS 강의 듣기",
