@@ -83,7 +83,7 @@ const DoneTitle = styled.p`
 `;
 const TodoWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
   gap: 25px;
 `;
 
