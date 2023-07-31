@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
 }
 body {
     font-family: 'Ramche';
+    
     max-width: 1200px;
     min-width: 800px;
     margin: 0 auto
